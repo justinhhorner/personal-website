@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Justin Horner">
+    <meta name="description" content="Justin Horner is a game programmer and software engineer building video games, web/mobile apps, and more">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Horner</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap">
+    <style>
+        :root {
+            --white: #fff;
+            --blue: #9FC2CC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: var(--white);
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(180deg, #190C19 0%, #2F002F 100%) 0% 0% no-repeat padding-box;
+            background-attachment: fixed;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .site-nav {
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+            margin-bottom: 20%;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+        .site-nav > .brand {
+            margin-bottom: 16px;
+        }
+        .site-nav > .brand > .logo {
+            width: 24px;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+        .site-nav > .brand > .name {
+            font-size: 1.2rem;
+        }
+
+        .menu {
+            list-style-type: none;
+        }
+        .menu > .menuitem {
+            opacity: 0.6;
+            transition: ease-in 0.1s;
+            margin-right: 16px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .menu > .menuitem:hover {
+            opacity: 1;
+        }
+
+        .social-menu > .menuitem {
+            width: 32px;
+            display: inline-block;
+        }
+
+        .site-intro > .work {
+            text-align: center;
+            font-size: 3.2rem;
+            margin: 40px 0 80px;
+            text-transform: uppercase;
+            min-height: 70px;
+        }
+        .site-intro > .work::after {
+            content: attr(data-underscore-char);
+            border-bottom: 4px solid var(--white);
+        }
+        .site-intro > .work.blink::after {
+            animation: cursor-blink 1s steps(2) infinite;
+        }
+        .site-intro > .title {
+            margin: 8px 0;
+            color: var(--blue);
+            text-transform: uppercase;
+        }
+        .site-intro > .subtitle {
+            color: var(--blue);
+            font-size: 3rem;
+            margin: 8px 0;
+            text-transform: uppercase;
+        }
+
+        .site-content {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .textcontainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--blue);
+        }
+
+        @keyframes cursor-blink {
+            0% {
+                border-bottom: none;
+            }
+        }
+
+        @media only screen and (min-width: 812px) {
+            .container {
+                max-width: 70%;
+            }
+
+            .site-nav {
+                flex-direction: row;
+            }
+            .site-nav > .brand {
+                margin-bottom: 0;
+            }
+
+            .site-content {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .site-intro > .work {
+                text-align: left;
+            }
+
+            .profile-image {
+                height: auto;
+                min-width: 50%;
+                border: 6px solid var(--blue);
+                margin-left: 8px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .container {
+                max-width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="site-nav">
+                <div class="brand">
+                    <img class="logo" src="images/logo.png" alt="Justin Horner's Logo">
+                    <span class="name">Justin Horner</span>
+                </div>
+                <ul class="menu">
+                    <li class="menuitem"><a href="https://www.twitter.com/justinhhorner">Contact</a></li>
+                    <li class="menuitem"><a href="https://blog.justinhhorner.com">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="site-content">
+            <div class="textcontainer">
+                <div class="site-intro">
+                    <h2 class="title">Hi, I'm Justin</h2>
+                    <h3 class="subtitle">I Create</h3>
+                    <p class="work" data-underscore-char="s">Games</p>
+                </div>
+                <ul class="menu social-menu">
+                    <li class="menuitem">
+                        <a href="https://www.github.com/justinhhorner">
+                            <img src="images/github.svg" alt="GitHub">
+                        </a></li>
+                    <li class="menuitem">
+                        <a href="https://www.twitter.com/justinhhorner">
+                            <img src="images/twitter.svg" alt="Twitter">
+                        </a>
+                    </li>
+                    <li class="menuitem">
+                        <a href="https://www.linkedin.com/in/justinhhorner">
+                            <img src="images/linkedin.svg" alt="LinkedIn">
+                        </a>
+                    </li>
+                    <li class="menuitem">
+                        <a href="https://www.instagram.com/justinhhorner">
+                            <img src="images/instagram.svg" alt="Instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <img class="profile-image" src="images/profile.jpg" alt="Justin Horner">
+        </main>
+    </div>
+
+    <script>
+        let workAreaIndex = -1;
+        let workTextElm = null;
+        let underscoreAttr = null;
+
+        const typeTime = 150;
+        const deleteTime = 100;
+        const delayTime = 2000;
+        const workAreas = ['games','apps', 'services','tools','tutorials'];
+
+        function displayNextWorkArea() {
+            workAreaIndex++;
+            const workArea = workAreas[workAreaIndex %= workAreas.length];
+
+            return new Promise(resolve => {
+                let counter = 0;
+                const handle = setInterval(() => {
+                    counter++;
+                    workTextElm.textContent += workArea[counter - 1];
+                    underscoreAttr.value = workArea[counter];
+                    if (counter === workArea.length - 1) {
+                        clearInterval(handle);
+                        workTextElm.classList.add('blink');
+                        setTimeout(() => {
+                            workTextElm.classList.remove('blink');
+                            resolve();
+                        }, delayTime);
+                    }
+                }, typeTime);
+            });
+        }
+
+        function deleteCurrentWorkArea() {
+            return new Promise(resolve => {
+                const handle = setInterval(() => {
+                    underscoreAttr.value = workTextElm.textContent[workTextElm.textContent.length - 1];
+                    workTextElm.textContent =  workTextElm.textContent.substr(0, workTextElm.textContent.length - 1);
+                    if (workTextElm.textContent.length === 0) {
+                        clearInterval(handle);
+                        resolve();
+                    }
+                }, deleteTime);
+            })
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            workTextElm = document.querySelector('.work');
+            workTextElm.innerHTML = '';
+            underscoreAttr = workTextElm.attributes['data-underscore-char'];
+
+            while(true) {
+                await displayNextWorkArea();
+                await deleteCurrentWorkArea();
+            }
+        });
+    </script>
+</body>
+</html>
